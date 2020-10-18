@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>SHtyte - About Me</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <title>Htyte - About Me</title>
+        <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -44,7 +44,7 @@
                         <span class="text-primary">Htyte</span>
                     </h1>
                     <div class="subheading mb-4">
-                        Brooklyn · NY 11235 · Contact Me (remember to add form)
+                        <a class="text-primary" href="#contact">Contact Me</a>
                     </div>
                     <p class="lead mb-4">I'm a software developer engineer and I enjoy creating services and applications that empower users with seamless and meaningful experiences.</p>
 
@@ -356,6 +356,42 @@
                     </ul>
                 </div>
             </section>
+            <!-- Contact -->
+            <section class="resume-section" id="contact">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Contact Me</h2>
+                    <form class="form-contact" action="mailto:connectwithsanda@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label>First name</label>
+                                <input type="text" name="firstName" class="form-control" required autofocus>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label>Last name</label>
+                                <input type="text" name="lastName" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label>Email</label>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label>Telephone</label>
+                                <input type="tel" name="tel" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label>Message</label>
+                                <textarea class="form-control" name="message" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <button class="btn btn-dark" type="submit" value="send">Send Message</button>
+                    </form>
+                </div>
+            </section>
+
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

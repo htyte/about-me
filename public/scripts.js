@@ -39,4 +39,27 @@
     $("body").scrollspy({
         target: "#sideNav",
     });
+
+    // $('form').on('submit', (e) => {
+    //     e.preventDefault();
+
+    //     const fname = $("#firstName").val().trim();
+    //     const lname = $("lastName").val().trim();
+    //     const email = $("#email").val().trim();
+    //     const tel = $("#tel").val().trim();
+    //     const message = $("#message").val().trim();
+
+    //     const data = {
+    //         fname,
+    //         lname,
+    //         email,
+    //         tel,
+    //         message
+    //     }
+
+    //     $.post('/email', data, () => {
+    //         console.log('Sending data to server');
+    //     })
+    // })
+
 })(jQuery); // End of use strict

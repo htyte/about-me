@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Htyte - About Me</title>
-        <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -20,7 +20,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">Sanda Htyte</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile_headshot_sm.jpg" alt="" /></span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile_headshot_sm.jpg" alt="" /></span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -31,6 +31,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
@@ -44,7 +45,7 @@
                         <span class="text-primary">Htyte</span>
                     </h1>
                     <div class="subheading mb-4">
-                        <a class="text-primary" href="#contact">Contact Me</a>
+                        <a class="text-primary js-scroll-trigger" href="#contact">Contact Me</a>
                     </div>
                     <p class="lead mb-4">I'm a software developer engineer and I enjoy creating services and applications that empower users with seamless and meaningful experiences.</p>
 
@@ -259,8 +260,8 @@
                         <li class="list-inline-item"><i class="fab fa-less"></i></li>
                         <li class="list-inline-item"><i class="fab fa-npm"></i></li>
                         <li class="list-inline-item"><i class="fab fa-aws"></i></li>
-                        <li class="database-icon"><img src="assets/img/mysql_icon.png"></i></li>
-                        <li class="database-icon"><img src="assets/img/postgresql_icon.png"></i></li>
+                        <li class="database-icon"><img src="img/mysql_icon.png"></i></li>
+                        <li class="database-icon"><img src="img/postgresql_icon.png"></i></li>
                     </ul>
                     <div class="subheading mb-3 text-primary">Workflow</div>
                     <ul class="fa-ul mb-0">
@@ -356,42 +357,42 @@
                     </ul>
                 </div>
             </section>
+            <hr class="m-0" />
             <!-- Contact -->
             <section class="resume-section" id="contact">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Contact Me</h2>
-                    <form class="form-contact" action="mailto:connectwithsanda@gmail.com" method="post" enctype="text/plain">
+                    <form>
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
                                 <label>First name</label>
-                                <input type="text" name="firstName" class="form-control" required autofocus>
+                                <input type="text" id="firstName" class="form-control" required autofocus>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label>Last name</label>
-                                <input type="text" name="lastName" class="form-control" required>
+                                <input type="text" id="lastName" class="form-control" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
                                 <label>Email</label>
-                                <input type="email" name="email" class="form-control" required>
+                                <input type="email" id="email" class="form-control" required>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label>Telephone</label>
-                                <input type="tel" name="tel" class="form-control" required>
+                                <input type="tel" id="tel" class="form-control" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label>Message</label>
-                                <textarea class="form-control" name="message" rows="3"></textarea>
+                                <textarea class="form-control" id="message" rows="3"></textarea>
                             </div>
                         </div>
-                        <button class="btn btn-dark" type="submit" value="send">Send Message</button>
+                        <button class="btn btn-dark" type="submit">Send Message</button>
                     </form>
                 </div>
             </section>
-
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -399,6 +400,6 @@
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="scripts.js"></script>
     </body>
 </html>

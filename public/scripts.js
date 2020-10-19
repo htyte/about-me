@@ -40,26 +40,28 @@
         target: "#sideNav",
     });
 
-    // $('form').on('submit', (e) => {
-    //     e.preventDefault();
+    $('form').on('submit', (e) => {
+        e.preventDefault();
 
-    //     const fname = $("#firstName").val().trim();
-    //     const lname = $("lastName").val().trim();
-    //     const email = $("#email").val().trim();
-    //     const tel = $("#tel").val().trim();
-    //     const message = $("#message").val().trim();
+        const fname = $("#firstName").val().trim();
+        const lname = $("#lastName").val().trim();
+        const from = $("#from").val().trim();
+        const tel = $("#tel").val().trim();
+        const subject = $("#subject").valu().trim();
+        const message = $("#message").val().trim();
 
-    //     const data = {
-    //         fname,
-    //         lname,
-    //         email,
-    //         tel,
-    //         message
-    //     }
+        const data = {
+            fname,
+            lname,
+            from,
+            tel,
+            subject,
+            message
+        }
 
-    //     $.post('/email', data, () => {
-    //         console.log('Sending data to server');
-    //     })
-    // })
+        $.post('/email', data, () => {
+            console.log('Sending data to server');
+        })
+    })
 
 })(jQuery); // End of use strict

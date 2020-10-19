@@ -1,6 +1,6 @@
 const { urlencoded } = require('body-parser');
 const express = require('express');
-
+const sendMail = require('./mail')
 const app = express();
 const log = console.log;
 const PORT = 3000;
@@ -16,9 +16,16 @@ app.get('/', (req,res) => {
 })
 
 app.post('/email', (req, res) => {
-    // TODO: send email here
-    console.log('Data:', req.body)
-    res.json({message: 'Message received'})
+    log("body", req.body)
+    const {fname, lname, from, tel, subject, message} = req.body
+    sendMail(fname, lname, from, tel, subject, message, ((err, data) => {
+        if(err) {
+            log('are we entering into the error: ', err)
+            res.status(500).json({message: 'Internal Error'})
+        } else {
+            res.json({message: 'Email sent!'});
+        }
+    }))
 })
 
 app.listen(PORT, () => {

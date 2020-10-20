@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
 const mailGun = require('nodemailer-mailgun-transport');
+require('dotenv').config()
 
 const auth = {
     auth: {
@@ -18,7 +19,8 @@ const sendMail = (firstName, lastName, from, tel, subject, message, cb) => {
         tel: tel,
         subject: subject,
         text: message,
-        to: process.env.SEND_TO
+        to: process.env.SEND_TO,
+        cc: from
     }
     
     transporter.sendMail(mailOptions, ((err, data) => {

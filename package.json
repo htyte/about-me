@@ -5,7 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "deploy": "gh-pages -d src"
   },
   "repository": {
     "type": "git",
@@ -17,13 +18,14 @@
   "bugs": {
     "url": "https://github.com/htyte/about-me/issues"
   },
-  "homepage": "https://github.com/htyte/about-me#readme",
+  "homepage": "https://github.com/htyte/about-me",
   "dependencies": {
+    "clean-webpack-plugin": "^2.0.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "gh-pages": "^3.1.0",
     "nodemailer": "^6.4.14",
     "nodemailer-mailgun-transport": "^2.0.1",
-    "nodemon": "^2.0.5",
-    "clean-webpack-plugin": "^2.0.0"
+    "nodemon": "^2.0.5"
   }
 }

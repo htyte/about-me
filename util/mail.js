@@ -20,7 +20,6 @@ const sendMail = (firstName, lastName, from, tel, subject, message, cb) => {
         subject: subject,
         text: message,
         to: process.env.SEND_TO,
-        cc: from
     }
     
     transporter.sendMail(mailOptions, ((err, data) => {

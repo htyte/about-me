@@ -4,8 +4,8 @@ require('dotenv').config()
 
 const auth = {
     auth: {
-        api_key: process.env.API_KEY,
-        domain: process.env.DOMAIN
+        api_key: process.env.MAILGUN_API_KEY,
+        domain: process.env.MAILGUN_DOMAIN
     }
 }
 
@@ -19,7 +19,7 @@ const sendMail = (firstName, lastName, from, tel, subject, message, cb) => {
         tel: tel,
         subject: subject,
         text: message,
-        to: process.env.SEND_TO,
+        to: process.env.TO_EMAIL,
     }
     
     transporter.sendMail(mailOptions, ((err, data) => {

@@ -1,30 +1,35 @@
 const { urlencoded } = require('body-parser');
 const express = require('express');
-const sendMail = require('./util/mail')
+const path = require('path');
+const nodemailer = require('nodemailer');
+const sendMail = require('./util/contactSMTP')
+
 const app = express();
 const log = console.log;
 const PORT = process.env.PORT || 3000;
-const path = require('path');
 
 app.use(express.urlencoded({extended: false}))
 app.use(express.json());
 app.use(express.static('public'));
 
+
 app.get('/', (req,res) => {
     res.sendFile(path.resolve('index.html'));
 })
 
-app.post('/email', (req, res) => {
-    const {fname, lname, from, tel, subject, message} = req.body
-    sendMail(fname, lname, from, tel, subject, message, ((err, data) => {
+app.post('/contact', (req, res) => {
+    const {name, company, email, phone, subject, message} = req.body;
+    
+    sendMail(name, company, email, phone, subject, message, ((err, data) => {
         if(err) {
-            res.status(500).json({message: 'Internal Error'})
+            log('error: ', err);
+            res.status(500).json({message: 'Internal Server Error'});
         } else {
-            res.json({message: 'Email sent!'});
-        }
-    }))
+            log('Message send: ', data.messageId);
+            log('Preview URL: ', nodemailer.getTestMessageUrl(data));
+            res.json({message: 'Email Sent!'});
+        }})
+    )
 })
 
-app.listen(PORT, () => {
-    log('Server is listening on port: ', PORT)
-})
+app.listen(PORT, () => log('Server is listening on port: ', PORT));

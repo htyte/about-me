@@ -32,23 +32,23 @@
     $('form').on('submit', (e) => {
         e.preventDefault();
 
-        const fname = $("#firstName").val().trim();
-        const lname = $("#lastName").val().trim();
-        const from = $("#from").val().trim();
-        const tel = $("#tel").val().trim();
+        const name = $("#name").val().trim();
+        const company = $("#company").val().trim();
+        const email = $("#email").val().trim();
+        const phone = $("#phone").val().trim();
         const subject = $("#subject").val().trim();
         const message = $("#message").val().trim();
 
         const data = {
-            fname,
-            lname,
-            from,
-            tel,
+            name,
+            company,
+            email,
+            phone,
             subject,
             message
         }
 
-        $.post('/email', data, () => {
+        $.post('/contact', data, () => {
             $('#thankyou').show(800, function() {
                 $("#contact").hide();
             });

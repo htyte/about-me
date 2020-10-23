@@ -55,6 +55,12 @@
         })
     })
 
+    // Dynamic copyright
+    let date = new Date();
+    let year = date.getFullYear();
+
+    $('#copyright').html("<div><p>Copyright ©" + year + " Sanda Htyte</div></p>");
+
 })(jQuery); // End of use strict
 
 function scrollAction() {
